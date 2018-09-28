@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="EmployeePhoneBook.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EmployeePhoneBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <NavigationView x:Name="nvTopLevelNav"
+                        Loaded="nvTopLevelNav_Loaded"
+                        Margin="0,12,0,0"
+                        IsBackEnabled="True"
+                        ItemInvoked="nvTopLevelNav_ItemsInvoked"
+                        BackRequested="NavView_BackRequested"
+                        IsTabStop="False" 
+                        Header =" Employee PhoneBook">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="ContactInfo" Tag="Display"  FontSize="18">
+                    <TextBlock Tag="Nav_Display">Display Phone Book</TextBlock>
+                </NavigationViewItem>
+                <NavigationViewItem Icon="AddFriend"  Tag="Add" FontSize="18">
+                    <TextBlock Tag="Nav_NewEmployee">Add New Employee</TextBlock>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame"></Frame>
+        </NavigationView>
+        
+    </Grid>
+</Page>

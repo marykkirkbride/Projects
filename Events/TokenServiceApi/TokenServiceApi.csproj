@@ -1,0 +1,62 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-TokenServiceApi-BD7A60C8-4072-46AB-B99F-CFC5874DD590</UserSecretsId>
+    <DockerTargetOS>Linux</DockerTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Quickstarts\1_ClientCredentials\**" />
+    <Compile Remove="Quickstarts\2_ResourceOwnerPasswords\**" />
+    <Compile Remove="Quickstarts\3_ImplicitFlowAuthentication\**" />
+    <Compile Remove="Quickstarts\4_ImplicitFlowAuthenticationWithExternal\**" />
+    <Compile Remove="Quickstarts\5_HybridFlowAuthenticationWithApiAccess\**" />
+    <Compile Remove="Quickstarts\6_AspNetIdentity\**" />
+    <Compile Remove="Quickstarts\7_JavaScriptClient\**" />
+    <Compile Remove="Quickstarts\8_EntityFrameworkStorage\**" />
+    <Compile Remove="Quickstarts\Combined_AspNetIdentity_and_EntityFrameworkStorage\**" />
+    <Content Remove="Quickstarts\1_ClientCredentials\**" />
+    <Content Remove="Quickstarts\2_ResourceOwnerPasswords\**" />
+    <Content Remove="Quickstarts\3_ImplicitFlowAuthentication\**" />
+    <Content Remove="Quickstarts\4_ImplicitFlowAuthenticationWithExternal\**" />
+    <Content Remove="Quickstarts\5_HybridFlowAuthenticationWithApiAccess\**" />
+    <Content Remove="Quickstarts\6_AspNetIdentity\**" />
+    <Content Remove="Quickstarts\7_JavaScriptClient\**" />
+    <Content Remove="Quickstarts\8_EntityFrameworkStorage\**" />
+    <Content Remove="Quickstarts\Combined_AspNetIdentity_and_EntityFrameworkStorage\**" />
+    <EmbeddedResource Remove="Quickstarts\1_ClientCredentials\**" />
+    <EmbeddedResource Remove="Quickstarts\2_ResourceOwnerPasswords\**" />
+    <EmbeddedResource Remove="Quickstarts\3_ImplicitFlowAuthentication\**" />
+    <EmbeddedResource Remove="Quickstarts\4_ImplicitFlowAuthenticationWithExternal\**" />
+    <EmbeddedResource Remove="Quickstarts\5_HybridFlowAuthenticationWithApiAccess\**" />
+    <EmbeddedResource Remove="Quickstarts\6_AspNetIdentity\**" />
+    <EmbeddedResource Remove="Quickstarts\7_JavaScriptClient\**" />
+    <EmbeddedResource Remove="Quickstarts\8_EntityFrameworkStorage\**" />
+    <EmbeddedResource Remove="Quickstarts\Combined_AspNetIdentity_and_EntityFrameworkStorage\**" />
+    <None Remove="Quickstarts\1_ClientCredentials\**" />
+    <None Remove="Quickstarts\2_ResourceOwnerPasswords\**" />
+    <None Remove="Quickstarts\3_ImplicitFlowAuthentication\**" />
+    <None Remove="Quickstarts\4_ImplicitFlowAuthenticationWithExternal\**" />
+    <None Remove="Quickstarts\5_HybridFlowAuthenticationWithApiAccess\**" />
+    <None Remove="Quickstarts\6_AspNetIdentity\**" />
+    <None Remove="Quickstarts\7_JavaScriptClient\**" />
+    <None Remove="Quickstarts\8_EntityFrameworkStorage\**" />
+    <None Remove="Quickstarts\Combined_AspNetIdentity_and_EntityFrameworkStorage\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Consent\Index.cshtml" />
+    <None Include="Views\Consent\_ScopeListItem.cshtml" />
+    <None Include="Views\Grants\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="2.3.0-preview1-update1" />
+    <PackageReference Include="IdentityServer4.AspNetIdentity" Version="2.3.0-preview1-update1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.1916590" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

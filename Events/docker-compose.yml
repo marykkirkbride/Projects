@@ -1,0 +1,69 @@
+version: "3.4"
+
+networks:
+   frontend:
+   backend:
+
+services:
+   eventswebmvc:
+      build: 
+         context: .\EventsWebMvc
+         dockerfile: Dockerfile
+      environment: 
+         ASPNETCORE_ENVIRONMENT: Development 
+         EventCatalogUrl: http://eventcatalog
+         IdentityUrl: http://10.0.75.1:5740
+      container_name: eventswebshop
+      ports:
+         - "5700:80"
+      networks:
+         - frontend 
+      depends_on:
+         - eventcatalog
+         - eventtokenserver
+
+   eventcatalog:
+      build:
+         context: .\Events
+         dockerfile: Dockerfile
+      image: events/eventsapi
+      environment:
+         DatabaseServer: mssqlserver
+         DatabaseName: eventsdb
+         DatabaseUser: sa
+         DatabaseUserPassword: ProductApi(!)
+      container_name: eventsapi
+      ports:
+         - "5140:80"
+      networks:
+         - backend
+         - frontend
+      depends_on:
+         - mssqlserver
+
+   eventtokenserver:
+      build: 
+         context: .\TokenServiceApi
+         dockerfile: Dockerfile
+      environment: 
+         ASPNETCORE_ENVIRONMENT: Development 
+         MvcClient: http://localhost:5700
+      container_name: tokenserviceapicontainerevents
+      ports:
+         - "5740:80"
+      networks:
+         - backend
+         - frontend 
+      depends_on:
+         - mssqlserver
+
+   mssqlserver:
+      image: "microsoft/mssql-server-linux:latest"
+      ports:
+         - "560:1433"
+      container_name: mssqlcontainerevents
+      environment:
+         ACCEPT_EULA: Y
+         SA_PASSWORD: ProductApi(!)
+      networks:
+         - backend

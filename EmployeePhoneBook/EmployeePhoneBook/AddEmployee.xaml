@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="EmployeePhoneBook.AddEmployee"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EmployeePhoneBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <StackPanel Margin="20" Padding="10">
+            <TextBlock Text="Add Employee" FontWeight="Bold"  Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBox x:Name="employeeID" Header="Employee ID" Margin="0,24,0,0" MaxLength="15" Width="400" HorizontalAlignment="Left"  />
+            <RelativePanel>
+                <TextBox x:Name="firstName" Header= "First Name" Margin="0,24,0,0" MaxLength="50" Width="190" HorizontalAlignment="Left"  />
+                <TextBox x:Name="lastName" Header= "Last Name" Margin="24,24,0,0"  Width="190" RelativePanel.RightOf="firstName" />
+            </RelativePanel>
+            <TextBox x:Name="jobTitle" Header="Job Title" Margin="0,24,0,0" MaxLength="15" Width="400" HorizontalAlignment="Left"  />
+            <TextBox x:Name="phoneNumber" Header="Phone Number" Margin="0,24,0,0" MaxLength="15" Width="400" HorizontalAlignment="Left"  />
+            <TextBox x:Name="emailAddress" Header="Email Address" Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  />
+            <TextBox x:Name="location" Header="Location"  Margin="0,24,0,0" MaxLength="50" Width="400" HorizontalAlignment="Left"  />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="submitButton" Content="Submit" Margin="0,24" Click="submitButton_Click"/>
+            </StackPanel>
+            <TextBlock x:Name="StatusMessage" HorizontalAlignment="Center" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.569,1.13" Visibility="Collapsed"/>
+        </StackPanel>
+    </Grid>
+</Page>

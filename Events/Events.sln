@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "Events\Events.csproj", "{54B82DC4-DDB6-4ABE-A922-6D1E49C81BCC}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B753CAB4-E1BF-48A6-A389-BB29DC406820}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DA8DAB70-7990-40C7-86B7-281F25D6A9CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "web", "web", "{3A4F5E4F-42C3-42E7-9B88-A2FB35CA4924}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsWebMvc", "EventsWebMvc\EventsWebMvc.csproj", "{43FE94F9-6B5A-4802-93DA-9495A921331A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{2B2D17B1-973F-42BA-AF5A-B9925DD70855}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenServiceApi", "TokenServiceApi\TokenServiceApi.csproj", "{4054541C-E26B-4CB0-9A83-B9DDC63DC4EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54B82DC4-DDB6-4ABE-A922-6D1E49C81BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B82DC4-DDB6-4ABE-A922-6D1E49C81BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B82DC4-DDB6-4ABE-A922-6D1E49C81BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B82DC4-DDB6-4ABE-A922-6D1E49C81BCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B753CAB4-E1BF-48A6-A389-BB29DC406820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B753CAB4-E1BF-48A6-A389-BB29DC406820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B753CAB4-E1BF-48A6-A389-BB29DC406820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B753CAB4-E1BF-48A6-A389-BB29DC406820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FE94F9-6B5A-4802-93DA-9495A921331A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FE94F9-6B5A-4802-93DA-9495A921331A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FE94F9-6B5A-4802-93DA-9495A921331A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FE94F9-6B5A-4802-93DA-9495A921331A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4054541C-E26B-4CB0-9A83-B9DDC63DC4EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4054541C-E26B-4CB0-9A83-B9DDC63DC4EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4054541C-E26B-4CB0-9A83-B9DDC63DC4EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4054541C-E26B-4CB0-9A83-B9DDC63DC4EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54B82DC4-DDB6-4ABE-A922-6D1E49C81BCC} = {2B2D17B1-973F-42BA-AF5A-B9925DD70855}
+		{3A4F5E4F-42C3-42E7-9B88-A2FB35CA4924} = {DA8DAB70-7990-40C7-86B7-281F25D6A9CE}
+		{43FE94F9-6B5A-4802-93DA-9495A921331A} = {3A4F5E4F-42C3-42E7-9B88-A2FB35CA4924}
+		{2B2D17B1-973F-42BA-AF5A-B9925DD70855} = {DA8DAB70-7990-40C7-86B7-281F25D6A9CE}
+		{4054541C-E26B-4CB0-9A83-B9DDC63DC4EC} = {2B2D17B1-973F-42BA-AF5A-B9925DD70855}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C16666BA-2EB2-410E-88A5-E9576D82459E}
+	EndGlobalSection
+EndGlobal
